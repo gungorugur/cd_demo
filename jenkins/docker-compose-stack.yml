@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  jenkins:
+    image : ugurgungor/jenkins:lts
+    deploy:
+      replicas: 1
+      restart_policy: 
+        condition: any
+    volumes:
+      - jenkins_data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/bin/docker
+    ports:
+      - 8091:8080
+      - 5000:5000
+
+volumes:
+  jenkins_data:
+    driver: local
