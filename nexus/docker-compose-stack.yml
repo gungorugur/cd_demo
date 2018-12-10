@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  nexus:
+    image : sonatype/nexus3:3.14.0
+    deploy:
+      replicas: 1
+      restart_policy: 
+        condition: any
+    volumes:
+      - nexus_data:/nexus-data 
+    ports:
+      - 8081:8081
+      - 8082:8082
+
+volumes:
+  nexus_data:
+    driver: local
