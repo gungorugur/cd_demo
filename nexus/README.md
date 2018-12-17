@@ -1,6 +1,6 @@
 # Nexus Repository
 
-Run given command to wind up nexus repository with private docker registry.
+Run given command to wind up Nexus repository with private docker registry.
 
 ```bash
 ./run.sh admin admin123
