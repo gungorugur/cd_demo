@@ -1,0 +1,1 @@
+docker build . -t ugurgungor/docker-with-sudo:latest
