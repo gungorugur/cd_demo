@@ -3,7 +3,7 @@
 JENKINS_URL=$1
 JENKINS_USER=$2
 JENKINS_PASS=$3
-JENKINS_LABELS=$3
+JENKINS_LABELS=$4
 
 sudo chmod 777 /var/run/docker.sock
 
