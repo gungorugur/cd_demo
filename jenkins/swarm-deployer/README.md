@@ -1,6 +1,6 @@
 # Docker Swarm Client
 
-Run given command  to connecting to jenkins master as a docker in docker slave.
+Run given command  to connecting to jenkins master master as a slave.
 
 ```bash
 ./run.sh http://jenkins_url:port username password example-label
