@@ -1,5 +1,5 @@
 # cd_demo
 
-![alt text](/img/cd-diagram.png)
+![alt text](/img/cd-diagram.jpeg)
 
 WIP
