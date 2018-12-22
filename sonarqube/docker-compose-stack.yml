@@ -1,0 +1,24 @@
+version: '3.4'
+services:
+  sonar:
+    image : sonarqube:lts
+    deploy:
+      replicas: 1
+      restart_policy: 
+        condition: any
+    volumes:
+      - sonar_conf:/opt/sonarqube/conf
+      - sonar_data:/opt/sonarqube/data
+      - sonar_logs:/opt/sonarqube/logs
+      - sonar_extensions:/opt/sonarqube/extensions
+    ports:
+      - 8085:9000
+volumes:
+  sonar_conf:
+    driver: local
+  sonar_data:
+    driver: local
+  sonar_logs:
+    driver: local
+  sonar_extensions:
+    driver: local
