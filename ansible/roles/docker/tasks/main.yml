@@ -1,0 +1,13 @@
+- name: Add the GPG key for the official Docker repository 
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+- name: Add the Docker repository to APT sources  
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+- name: Update cache
+  apt:
+    update_cache: yes
+- name: Install docker
+  apt:
+    name: docker-ce
+    install_recommends: yes
